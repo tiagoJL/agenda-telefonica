@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        <meta charset="utf-8">
+        <title>Agenda Telefonica</title>
+    </head>
+    <body class="all">
+        <header class="header">
+            <h1 class="header__title">Agenda Telefônica</h1>
+        </header>
+        <main class="main">
+            <form class="main__form">
+
+                <h2 class="main__form__title">Formulário</h2>
+
+                <fieldset class="main__form__fieldset" id="contato_fieldset">
+
+                    <legend class="main__form__legent">Contato</legend>
+                    <label class="main__form__label" for="nome">Nome:</label>
+                    <input type="text" class="main__form__input" id="nome" maxlength="15">
+                    <label class="main__form__label" for="telefone">Telefone:</label>
+                    <input type="text" class="main__form__input" id="telefone">
+
+                </fieldset>
+
+                <fieldset class="main__form__fieldset" id="relacionamento_fieldset">
+
+                    <legend class="main__form__legent">Relacionamento</legend>
+                    <label for="trabalho" class="main__form__label relacionamento_label">Traballho</label>
+                    <label for="faculdade" class="main__form__label relacionamento_label">Faculdade</label>
+                    <label for="pessoal" class="main__form__label relacionamento_label">Pessoal</label>
+
+                    <input class="main__form__input relacionamento_input" type="radio" name="relacionamento" id="trabalho" value="trabalho">
+                    <input class="main__form__input relacionamento_input" type="radio" name="relacionamento" id="faculdade" value="faculdade">
+                    <input class="main__form__input relacionamento_input" type="radio" name="relacionamento" id="pessoal" value="pessoal">
+
+                </fieldset>
+
+                <input type="button" class="main__form__input" name="adicionar" value="Adicionar">
+
+            </form>
+
+            <section class="main__section" id="form_output">
+                <h2 class="main__form__title">Registros</h2>
+                <table class="main__table">
+                    <thead class="main__table__head">
+                        <tr class="main__table__row">
+                            <th class="main__table__title" scope="col">Nome</th>
+                            <th class="main__table__title" scope="col">Telefone</th>
+                            <th class="main__table__title" scope="col">Relacionamento</th>
+                            <th aria-label="ações" class="main__table__title"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody class="main__table__body">
+                        <tr class="main__table__row">
+                            <td class="main__table__content"></td>
+                            <td class="main__table__content"></td>
+                            <td class="main__table__content"></td>
+                            <td class="main__table__content"></td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot class="main__table__foot">
+                        <tr class="main__table__row">
+                            <th class="main__table__title" colspan="3" scope="row">Total de Contatos: </th>
+                            <td class="main__table__content output">---</td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </section>
+        </main>
+    </body>
+</html>
