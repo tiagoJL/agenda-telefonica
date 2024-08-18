@@ -4,6 +4,12 @@
         <meta name="viewport" content="initial-scale=1.0, width=device-width">
         <meta charset="utf-8">
         <title>Agenda Telefonica</title>
+        <link rel="stylesheet" type="text/css" href="./production/css/toast-notification-imports.css">
+        <link rel="stylesheet" type="text/css" href="./production/css/style.css
+        ">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Jersey+10&family=Kalnia+Glaze:wght@100..700&family=Rubik+80s+Fade&family=Syne+Mono&display=swap" rel="stylesheet">
     </head>
     <body class="all">
         <header class="header">
@@ -16,28 +22,22 @@
 
                 <fieldset class="main__form__fieldset" id="contato_fieldset">
 
-                    <legend class="main__form__legent">Contato</legend>
                     <label class="main__form__label" for="nome">Nome:</label>
                     <input type="text" class="main__form__input regx-mask-nameContact" id="nome" placeholder="James" maxlength="16">
                     <label class="main__form__label" for="telefone">Telefone:</label>
                     <input type="tel" class="main__form__input regx-mask-phone" id="telefone">
 
-                </fieldset>
-
-                <fieldset class="main__form__fieldset" id="relacionamento_fieldset">
-
                     <input class="main__form__input relacionamento_input" type="radio" name="relacionamento" id="trabalho" checked value="Traballho">
                     <input class="main__form__input relacionamento_input" type="radio" name="relacionamento" id="faculdade" value="Faculdade">
                     <input class="main__form__input relacionamento_input" type="radio" name="relacionamento" id="pessoal" value="Pessoal">
 
-                    <legend class="main__form__legent">Relacionamento</legend>
-                    <label for="trabalho" class="main__form__label relacionamento_label">Traballho</label>
+                    <label for="trabalho" class="main__form__label relacionamento_label">Trabalho</label>
                     <label for="faculdade" class="main__form__label relacionamento_label">Faculdade</label>
                     <label for="pessoal" class="main__form__label relacionamento_label">Pessoal</label>
 
-                </fieldset>
+                    <input type="button" class="main__form__input" name="adicionar" value="Adicionar">
 
-                <input type="button" class="main__form__input" name="adicionar" value="Adicionar">
+                </fieldset>
 
             </form>
 

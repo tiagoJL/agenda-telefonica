@@ -1,0 +1,121 @@
+.main {
+    display: grid;
+    grid-template-columns: auto minmax(auto, 900px) auto;
+    justify-content: center;
+    padding: 60px 30px;
+
+    &__form, &__section {
+        grid-column: 2/3;
+    }
+
+    &__form__title {
+        color: #F7F9F2;
+        font-weight: bold;
+        font-size: 1.6rem;
+    }
+
+    &__form__fieldset, &__table {
+        padding: 10px;
+        background-color: #F7F9F2;
+        border-radius: 5px;
+        position: relative;
+        margin: 20px 0;
+    }
+
+    &__form__label {
+        font-size: 1.2rem;
+        color: #191825;
+    }
+
+    .relacionamento_input {
+        display: none;
+    }
+
+    &__form__input {
+        display: block;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        padding: 5px;
+        border: 2px solid #191825;
+        border-radius: 5px;
+        // background-color: #FFA3FD;
+        color: #191825;
+        margin: 5px 0;
+        margin-bottom: 10px;
+        width: 200px;
+    }
+
+    .main__form__label {
+        cursor: pointer;
+    }
+
+    #trabalho:checked ~ .relacionamento_label[for="trabalho"] {
+        color: #FFA3FD;
+    }
+
+    #faculdade:checked ~ .relacionamento_label[for="faculdade"] {
+        color: #FFA3FD;
+    }
+
+    #pessoal:checked ~ .relacionamento_label[for="pessoal"] {
+        color: #FFA3FD;
+    }
+
+    .relacionamento_label {
+        padding: 5px;
+        border: 2px solid #191825;
+        border-radius: 5px;
+        display: inline-block;
+        margin: 20px 0;
+        width: 100px;
+        text-align: center;
+        background-color: #191825;
+        color:#F7F9F2;
+
+        &:nth-child(1n+2) {
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+    }
+
+    &__form__input[name="adicionar"], button[name="remover"] {
+        background-color: #F7F9F2;
+        color: #191825;
+        cursor: pointer;
+        display: block;
+        font-size: 1.2rem;
+        text-transform: capitalize;
+        padding: 5px;
+        border: 2px solid #191825;
+        border-radius: 5px;
+        // background-color: #FFA3FD;
+        color: #191825;
+        margin: 5px 0;
+        margin-bottom: 10px;
+    }
+
+    &__table {
+        width: 100%;
+        // border-collapse: collapse;
+    }
+
+    &__table__content, &__table__row, &__table__title  {
+        border: 2px solid #191825;
+        padding: 10px;
+    }
+
+    &__table__title[scope="col"] {
+        background-color: #191825;
+        color: #FFA3FD;
+    }
+
+    button[name="remover"] {
+        background-color: #921A40;
+        color:#F7F9F2;
+    }
+
+    td:nth-child(2) {
+        text-transform: capitalize;
+    }
+
+}
