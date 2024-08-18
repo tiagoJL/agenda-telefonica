@@ -77,13 +77,14 @@ export class PhoneBook {
     }
 
     addEventToRemoveRow() {
-        const buttonsRemove = document.querySelectorAll("[name='remover']")
-        if (!buttonsRemove) {return}
-        buttonsRemove.forEach(button => {
-            button.addEventListener("click", (e) => {
-            const index = +e.currentTarget.dataset.index
-            this.removeContact(index)})
-        })
+        return
+        // const buttonsRemove = document.querySelectorAll("[name='remover']")
+        // if (!buttonsRemove) {return}
+        // buttonsRemove.forEach(button => {
+        //     button.addEventListener("click", (e) => {
+        //     const index = +e.currentTarget.dataset.index
+        //     this.removeContact(index)})
+        // })
     }
 
     setContact(){
@@ -129,7 +130,7 @@ class TablePhoneBook {
             <td class="${this.tdCssClass}">${name}</td>
             <td class="${this.tdCssClass}">${phone}</td>
             <td class="${this.tdCssClass}">${relationship}</td>
-            <td class="${this.tdCssClass}"><button class="remover" data-index="${length-1}" name="remover">Remover</button></td>
+            <td class="${this.tdCssClass}"><button onclick="phoneBook.removeContact(${length-1})" class="remover" data-index="${length-1}" name="remover">Remover</button></td>
         </tr>
         `
         this.tbody.insertAdjacentHTML("beforeend", html)
@@ -159,7 +160,7 @@ class TablePhoneBook {
                 <td class="${this.tdCssClass}">${name}</td>
                 <td class="${this.tdCssClass}">${phone}</td>
                 <td class="${this.tdCssClass}">${relationship}</td>
-                <td class="${this.tdCssClass}"><button class="remover" data-index="${data}" name="remover">Remover</button></td>
+                <td class="${this.tdCssClass}"><button class="remover" data-index="${data}" name="remover" onclick="phoneBook.removeContact(${data})" >Remover</button></td>
             </tr>
             `
             this.tbody.insertAdjacentHTML("beforeend", html)

@@ -6,6 +6,7 @@
 
     &__form, &__section {
         grid-column: 2/3;
+        overflow-x: auto;
     }
 
     &__form__title {
@@ -95,8 +96,7 @@
     }
 
     &__table {
-        width: 100%;
-        // border-collapse: collapse;
+        width: 100%;        
     }
 
     &__table__content, &__table__row, &__table__title  {
@@ -116,6 +116,10 @@
 
     td:nth-child(2) {
         text-transform: capitalize;
+    }
+
+    td:nth-child(1) {
+        font-weight: bold;
     }
 
 }
